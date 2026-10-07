@@ -45,9 +45,13 @@ What differs here: the agent is fully autonomous in the real client, and its rul
 
 ## Requirements
 
-- Windows, with the TFT client in English (international) or Chinese (CN server) — the coordinates were measured on a 16:9 screen.
-- Python 3 (the skill calls `py -3.14`; change it to your version). Only the standard library (`ctypes`) is used.
-- Claude Code with computer-use tools enabled.
+- **Windows only**: the input script uses the Windows API through `ctypes`.
+- **A 16:9 screen**: all coordinates were measured on 16:9 displays. On 16:10 or ultrawide screens the shop, bench and board positions may not line up, and you will need to re-measure them in `SKILL.md`.
+- The TFT client in English (international) or Chinese (CN server).
+- Any Python 3 (the skill calls `py -3`; use `python` if you don't have the `py` launcher). Only the standard library is used.
+- **Claude Code with computer-use tools available.** The skill sees the game only through screenshots; without computer use it cannot play. On first run Claude will ask you to grant access to the game and client windows.
+- **Set 18 only** for the champion data and comp: after a set change, regenerate `s18-reference.md` and edit `strategy.md`. The input script, pitfalls and routine mostly carry over.
+- A strong model: a full clear took about 79 minutes of the 90-minute cap with Claude Opus 5.5; weaker or slower models may run out of time or lose.
 
 ## Install
 
@@ -112,9 +116,13 @@ This software is provided "as is", without warranty of any kind. You are solely 
 
 ### 环境要求
 
-- Windows，云顶之弈客户端为英文（国际服）或中文（国服），坐标在 16:9 屏幕上测得。
-- Python 3（skill 里调用 `py -3.14`，按你的版本修改），只用标准库 `ctypes`。
-- 开启了 computer use 工具的 Claude Code。
+- **仅支持 Windows**：输入脚本通过 `ctypes` 调用 Windows API。
+- **16:9 屏幕**：所有坐标都在 16:9 屏幕上测得。16:10 或带鱼屏上商店、备战席、棋盘的位置可能对不上，需要自己在 `SKILL.md` 里重新测量。
+- 云顶之弈客户端为英文（国际服）或中文（国服）。
+- 任意 Python 3（skill 调用 `py -3`；没有 `py` 启动器就用 `python`），只用标准库。
+- **Claude Code 里要有 computer use 工具。** skill 只靠截图看游戏，没有 computer use 就玩不了。第一次运行时 Claude 会请求访问游戏和客户端窗口的权限。
+- **英雄资料和阵容只适用于 S18**：换赛季后需要重新生成 `s18-reference.md`、修改 `strategy.md`；输入脚本、常见坑和每回合流程基本通用。
+- 模型要够强：用 Claude Opus 5.5 通关一整局约 79 分钟，离 90 分钟上限不远；更弱或更慢的模型可能打不完或打不过。
 
 ### 安装
 

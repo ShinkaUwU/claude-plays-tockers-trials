@@ -4,7 +4,7 @@ Coordinates are in the 1456x819 screenshot frame (the frame the computer-use
 screenshot tool reports when the game fills the screen). They are mapped onto
 the TFT window's client area, so clicks land correctly at any resolution.
 
-Usage:  py -3.14 tft.py "CMD ; CMD ; ..."
+Usage:  py -3 tft.py "CMD ; CMD ; ..."
 Commands:
   r X Y [ms]        right press-hold-release (default 100ms; use 150-400)
   l X Y [ms]        left press-hold-release

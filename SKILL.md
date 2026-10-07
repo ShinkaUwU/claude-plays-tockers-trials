@@ -13,10 +13,10 @@ description: Play Teamfight Tactics (TFT) Set 18 "Tocker's Trials" (发条鸟的
    - The game window process: `tfttencentclient-win64-shipping.exe` on the Chinese (Tencent) server, `tftclient-win64-shipping.exe` on the international (English) client. Requesting a name that doesn't exist makes the whole `request_access` fail, so take a screenshot first and read the hidden process names before requesting.
    - `leagueclientux.exe`, `riot client.exe` (client / end-of-game screens)
 2. **Do not use computer-use's own clicks to play the game**: the game window is often treated as "desktop shell in the foreground" and clicks are rejected, and the game does not register its right-clicks. Still use computer-use `screenshot` / `zoom` for looking.
-3. Send all input through this skill's script (Python 3.14, `py -3.14`):
+3. Send all input through this skill's script (any Python 3, `py -3`; use `python` if the `py` launcher is missing):
 
 ```bash
-py -3.14 "<skill dir>/scripts/tft.py" "CMD ; CMD ; ..."
+py -3 "<skill dir>/scripts/tft.py" "CMD ; CMD ; ..."
 ```
 
 | Command | Effect |
